@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-import ToDoForm from './components/To-doForm';
 import TodoList from './components/To-doList';
 
 function App() {
