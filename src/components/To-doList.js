@@ -8,7 +8,7 @@ function TodoList() {
     return (
         <div>
             <h1>What's Today's Plan ?</h1>
-            
+            <TodoForm />
         </div>
     )
 }
