@@ -1,8 +1,10 @@
 import React, {useState} from 'react'
 import TodoForm from './To-doForm'
 import TodoList from './To-doList'
+import {FaWindowClose} from 'react-icons/fa';
+import {TiEdit} from 'react-icons/ti';
 
-function Todo() {
+function Todo({todos, completeTodo}) {
     const [edit, setEdit] = useState({
         id: null,
         value: ''
@@ -17,7 +19,8 @@ function Todo() {
             {todo.text}
         </div>
         <div className="icons">
-            
+            <FaWindowClose />
+            <TiEdit />
         </div>
 
         </div>
