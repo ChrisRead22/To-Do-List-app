@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState} from 'react';
 import TodoForm from './To-doForm'
 import TodoList from './To-doList'
 import {FaWindowClose} from 'react-icons/fa';
