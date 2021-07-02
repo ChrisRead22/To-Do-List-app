@@ -6,13 +6,13 @@ function TodoList() {
     const[todos, setTodos] = useState([]);
 
     const addToDo = todo => {
-        if(!todo.text || /^\s*$/.test(todo.text)) {
-            return
+        if (!todo.text || /^\s*$/.test(todo.text)) {
+            return;
         }
 
-        const newToDos = [todo, ...todos]
+        const newToDos = [todo, ...todos];
 
-        setTodos(newToDos)
+        setTodos(newToDos);
     };
 
     const removeTodo = id => {
@@ -28,7 +28,16 @@ function TodoList() {
             return todo
         })
         setTodos(updatedTodos);
-    }
+    };
+
+    const updateTodo = (todoId, newValue) => {
+        if (!newValue.text || /^\s*$/.test(newValue.text)) {
+            return;
+        }
+
+        setTodos(prev => prev.map(item => (item.id === todoId ? newValue : item))
+        );
+    };
 
 
     return (
@@ -39,6 +48,7 @@ function TodoList() {
             todos={todos}
             completeTodo={completeTodo} 
             removeTodo={removeTodo} 
+            updateTodo={updateTodo}
             />
         </div>
     );
