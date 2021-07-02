@@ -4,7 +4,7 @@ import TodoList from './To-doList'
 import {FaWindowClose} from 'react-icons/fa';
 import {TiEdit} from 'react-icons/ti';
 
-function Todo({todos, completeTodo}) {
+function Todo({todos, completeTodo, removeTodo}) {
     const [edit, setEdit] = useState({
         id: null,
         value: ''
