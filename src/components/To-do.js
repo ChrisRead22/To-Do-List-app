@@ -24,7 +24,7 @@ function Todo({todos, completeTodo}) {
         </div>
 
         </div>
-    ))
+    ));
 }
 
 export default Todo
